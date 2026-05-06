@@ -28,3 +28,18 @@ print('É Alpha Númerico? ( Tem letra ou Número )', (msg1.isalnum()))
 print('Está em letra maisculula?', (msg1.isupper()))
 print('Está em letra minuscula?', (msg1.islower()))
 print('A palavra está capitalizada? ( Tem maiscula e Minuscula )', (msg1.istitle()))
+
+# Desafio 5
+num1 = int(input('Digite um valor: '))
+antecessor = (num1-1)
+sucessor = num1+1
+print('Valor sucessor: {} \nValor antecessor: {}'.format(sucessor, antecessor))
+
+# Desafio 6
+nu1 = int(input('Digite um valor: '))
+dobro = nu1*2
+triplo = nu1*3
+raiz = nu1**(1/2)
+print('Dobro do valor: {}\nTriplo do valor: {}\nRaiz do valor: {}'.format(dobro, triplo, raiz))
+
+# Desafio 7
