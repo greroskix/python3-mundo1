@@ -1,19 +1,22 @@
-from math import floor, sqrt, sin, cos, tan
+from math import floor, sqrt, sin, cos, tan, radians
 from random import choice, shuffle
+from winsound import PlaySound, SND_ASYNC
 
 # Desafio 16
 num1 = float(input('Digite um Número: '))
-print(f'{floor(num1)}')
+print(f'{floor(num1)}') # Outro jeito seria usando int(num), pois ele vai pegar o float e transformando em um inteiro
 
 # Desafio 17
 cateto_oposto = float(input('Digite o cateto oposto: '))
 cateto_adjacente = float(input('Digite o cateto adjacente: '))
 hipotesuna = (sqrt(cateto_oposto**2 + cateto_adjacente**2))
-print(f'Valor da hipotenusa: {hipotesuna:.2f}')
+print(f'Valor da hipotenusa: {hipotesuna:.2f}') # Outro jeito seria usando o hypot, que ficaria assim: hypot(ca,co)
 
 # Desafio 18
 angulo = float(input('Digite um Ângulo: '))
-print(f'Valor do Seno: {sin(angulo):.2f}, Valor do Coseno: {cos(angulo):.2f}, Valor da Tangente: {tan(angulo):.2f}')
+radiano = radians(angulo)
+print(f'Valor do Seno: {sin(radiano):.2f}, Valor do Coseno: {cos(radiano):.2f}, Valor da Tangente: {tan(radiano):.2f}')
+# Nesse exercicio eu esqueci de conveter o angulo para radiano antes, usando o radians
 
 # Desafio 19
 aluno1 = str(input('Digite o nome do Aluno 1: '))
@@ -33,3 +36,6 @@ shuffle(seminario_ordem)
 print(f'A ordem do seminario vai ser: {seminario_ordem}')
 
 # Desafio 21
+alee = 'alee.wav'
+PlaySound(alee, SND_ASYNC)
+input('Presione enter para parar a música.')
