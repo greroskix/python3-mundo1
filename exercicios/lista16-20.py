@@ -1,6 +1,6 @@
 from math import floor, sqrt, sin, cos, tan, radians
 from random import choice, shuffle
-from winsound import PlaySound, SND_ASYNC
+import pygame
 
 # Desafio 16
 num1 = float(input('Digite um Número: '))
