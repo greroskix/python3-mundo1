@@ -1,6 +1,6 @@
 from math import floor, sqrt, sin, cos, tan, radians
 from random import choice, shuffle
-import pygame
+import miniaudio
 
 # Desafio 16
 num1 = float(input('Digite um Número: '))
@@ -36,6 +36,7 @@ shuffle(seminario_ordem)
 print(f'A ordem do seminario vai ser: {seminario_ordem}')
 
 # Desafio 21
-alee = 'alee.wav'
-PlaySound(alee, SND_ASYNC)
-input('Presione enter para parar a música.')
+musica = miniaudio.stream_file('alee.mp3')
+dispositivo = miniaudio.PlaybackDevice()
+dispositivo.start(musica)
+input("Tocando som... Pressione Enter para parar.")
